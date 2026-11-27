@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Acre · Homes with room to breathe</title>
+<meta name="description" content="A private brokerage for considered homes. Every residence walked, verified and presented by a senior advisor.">
+<meta name="theme-color" content="#0A3B25">
+<meta property="og:title" content="Acre · Homes with room to breathe">
+<meta property="og:description" content="A private brokerage for considered homes, each one walked and presented by a senior advisor.">
+<meta property="og:image" content="/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/img/hero.jpg" as="image">
+<link rel="stylesheet" href="/style.css">
+<script>try{if(localStorage.getItem('acre.night')==='1')document.documentElement.classList.add('night')}catch(e){}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><rect x="1.5" y="1.5" width="29" height="29" rx="1"/><path d="M7 25 16 7l9 18"/><path d="M10.6 17.8h10.8M12.2 21.4h7.6M13.6 25h4.8"/></symbol>
+ <symbol id="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+ <symbol id="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+ <div class="wrap">
+  <a href="#top" class="logo" aria-label="Acre home"><svg><use href="#mark"/></svg>ACRE</a>
+  <nav class="links"><a href="#residences">Residences</a><a href="#advisors">Advisors</a><a href="#about">About</a><a href="#journal">Journal</a><a href="#contact">Contact</a></nav>
+  <div class="r"><button class="mode" id="mode" aria-label="Switch light and dark"><svg><use href="#moon"/></svg></button><button class="btn" data-view>Private viewing</button><button class="burger" id="burger" aria-label="Menu"><i></i></button></div>
+ </div>
+</header>
+<div class="menu" id="menu">
+ <div class="top"><span class="logo"><svg><use href="#mark"/></svg>ACRE</span><button class="burger" id="close" style="display:grid" aria-label="Close menu">✕</button></div>
+ <a class="l" href="#residences">Residences</a><a class="l" href="#advisors">Advisors</a><a class="l" href="#about">About</a><a class="l" href="#journal">Journal</a><a class="l" href="#contact">Contact</a>
+ <button class="btn btn-c" data-view>Arrange a private viewing <i>→</i></button>
+</div>
+
+<main id="top">
+<section class="hero">
+ <div class="bg"><img src="/img/hero.jpg" alt="Timber living room with a glass wall facing the mountains at sunset" fetchpriority="high"></div>
+ <div class="wrap">
+  <div class="hrow">
+   <div>
+    <span class="eb reveal">Private residences</span>
+    <h1 class="reveal">Homes with room<br>to breathe.</h1>
+    <p class="reveal">A private brokerage for considered homes, each one walked, verified and presented by a senior advisor.</p>
+    <div class="ctas reveal"><a class="btn btn-c" href="#residences">View residences <i>→</i></a><button class="btn btn-o" data-view>Private viewing</button></div>
+   </div>
+   <div class="feat reveal" id="feat">
+    <div class="top"><span>NOW PRESENTING</span><span id="fBadge">FEATURED</span></div>
+    <div class="ftxt" id="ftxt"><h3 id="fName">Cielo House</h3><small id="fAddr">4 Sierra Vista Lane, Ojai, CA</small><div class="pr"><b id="fPrice">$4,200,000</b><button class="tl" id="fView">View <i>→</i></button></div></div>
+    <div class="segs" id="segs"><button aria-label="Residence 1"><i></i></button><button aria-label="Residence 2"><i></i></button><button aria-label="Residence 3"><i></i></button></div>
+   </div>
+  </div>
+  <form class="search reveal" id="search">
+   <div class="sf"><label for="sLoc">LOCATION</label><select id="sLoc"><option value="">All locations</option><option>Ojai</option><option>Asheville</option><option>Lake Oswego</option></select></div>
+   <div class="sf"><label for="sType">PROPERTY TYPE</label><select id="sType"><option value="">All types</option><option value="estate">Estate</option><option value="modern">Modern</option><option value="waterfront">Waterfront</option></select></div>
+   <div class="sf"><label for="sPrice">PRICE RANGE</label><select id="sPrice"><option value="">Any price</option><option value="0-1500000">Under $1.5m</option><option value="1500000-3000000">$1.5m to $3m</option><option value="3000000-99999999">$3m +</option></select></div>
+   <div class="sf"><label for="sBed">BEDROOMS</label><select id="sBed"><option value="0">Any</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option></select></div>
+   <button class="btn" type="submit">Search <i>→</i></button>
+  </form>
+ </div>
+</section>
+
+<div class="tick" aria-hidden="true"><div class="row"><span>New this week</span><span>Waterfront</span><span>Architect led</span><span>Move in ready</span><span>Off market</span><span>Historic homes</span><span>New this week</span><span>Waterfront</span><span>Architect led</span><span>Move in ready</span><span>Off market</span><span>Historic homes</span></div></div>
+
+<section class="sec" id="residences">
+ <div class="wrap">
+  <div class="shead"><div><span class="eb reveal">Featured residences</span><h2 class="reveal">Chosen by hand, not by feed</h2></div><p class="reveal">A short list our advisors walked through this month. No syndicated listings, no tired photographs.</p></div>
+  <div class="cards" id="cards"></div>
+  <div class="below"><button class="tl reveal" id="viewAll">View all residences <i>→</i></button><span class="eb" id="count"></span></div>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div class="im"><img src="/img/about.jpg" alt="Soft beige hallway with a curved staircase" loading="lazy" id="aboutImg"></div>
+ <div class="box">
+  <div class="inner reveal">
+   <span class="eb">About Acre</span>
+   <blockquote id="quote">We work with people who care how they will live, not only what they will spend. Fewer listings, longer conversations, and the honesty to tell you when a house is wrong.</blockquote>
+   <div class="trio">
+    <div><i>01</i><b>Design led search</b><p>We begin with how you want to live, then find the homes that fit, not the other way round.</p></div>
+    <div><i>02</i><b>Structure and survey</b><p>Every home is read by someone who knows what a hairline crack is telling them.</p></div>
+    <div><i>03</i><b>Energy and longevity</b><p>Running costs and retrofit potential are on the table before you ever commit.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="stats">
+ <div class="wrap">
+  <div class="reveal"><b><span data-count="980">0</span>+</b><em>RESIDENCES PLACED</em></div>
+  <div class="reveal"><b data-count="18">0</b><em>YEARS IN PRACTICE</em></div>
+  <div class="reveal"><b data-count="9">0</b><em>STATES LICENSED</em></div>
+  <div class="reveal"><b><span data-count="32">0</span>+</b><em>SENIOR ADVISORS</em></div>
+ </div>
+</section>
+
+<section class="sec">
+ <div class="wrap">
+  <div class="shead"><div><span class="eb reveal">What else we do</span><h2 class="reveal">Support beyond the sale</h2></div></div>
+  <div class="svc">
+   <div class="sv reveal"><img src="/img/s1.jpg" alt="" loading="lazy"><h3>Mortgage and finance</h3><div><p>Introductions to lenders who understand architect designed and unusual homes.</p><button class="btn btn-c" data-svc="0">Learn more <i>→</i></button></div></div>
+   <div class="sv reveal"><img src="/img/s2.jpg" alt="" loading="lazy"><h3>Property management</h3><div><p>Quiet, careful care for owners who spend part of the year somewhere else.</p><button class="btn btn-c" data-svc="1">Learn more <i>→</i></button></div></div>
+   <div class="sv reveal"><img src="/img/s3.jpg" alt="" loading="lazy"><h3>Renovation and design</h3><div><p>Architects and builders we have trusted for years, briefed before you buy.</p><button class="btn btn-c" data-svc="2">Learn more <i>→</i></button></div></div>
+  </div>
+ </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<section style="padding-bottom:120px" id="advisors">
+ <div class="wrap">
+  <div class="shead"><div><span class="eb reveal">Our advisors</span><h2 class="reveal">The people behind every introduction</h2></div><p class="reveal">Four senior advisors, four markets, one standard of care.</p></div>
+  <div class="advs" id="advs"></div>
+  <div class="below"><button class="tl reveal" data-view>Book time with an advisor <i>→</i></button></div>
+ </div>
+</section>
+
+<section class="tst">
+ <div class="wrap">
+  <div class="stars">★★★★★</div>
+  <blockquote id="tq"></blockquote>
+  <div class="who" id="tw"></div>
+  <div class="dots" id="tdots"></div>
+ </div>
+</section>
+
+<section class="sec" id="journal">
+ <div class="wrap">
+  <div class="shead"><div><span class="eb reveal">The journal</span><h2 class="reveal">Notes for buyers and sellers</h2></div><p class="reveal">Written by the advisors doing the work, not by a content team.</p></div>
+  <div class="jr" id="jr"></div>
+ </div>
+</section>
+
+<section class="cta" id="contact">
+ <img src="/img/cta.jpg" alt="" loading="lazy" id="ctaImg">
+ <div class="in">
+  <span class="eb reveal">Private viewings</span>
+  <h2 class="reveal">Ready for your next chapter?</h2>
+  <p class="reveal">Tell us what you are looking for and we will pair you with the advisor who knows that place best.</p>
+  <div class="reveal"><button class="btn btn-c" data-view>Arrange a private viewing <i>→</i></button></div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="fg">
+   <div><span class="logo"><svg><use href="#mark"/></svg>ACRE</span><p>A private brokerage for considered homes. Licensed in nine states.</p></div>
+   <div class="col"><h6>EXPLORE</h6><a href="#residences">Residences</a><a href="#advisors">Advisors</a><a href="#about">About</a><a href="#journal">Journal</a></div>
+   <div class="col"><h6>CONTACT</h6><span>hello@acre.homes</span><span>+1 (805) 555 0187</span><span>210 East Ojai Avenue, Ojai, CA 93023</span></div>
+   <div class="col"><h6>NEVER MISS A RESIDENCE</h6><p>New homes in your inbox before they reach the portals.</p><form id="news" novalidate><label for="nEmail">YOUR EMAIL</label><input id="nEmail" type="email" placeholder="you@example.com"><button class="btn">Subscribe <i>→</i></button><div class="fmsg" id="nMsg"></div></form></div>
+  </div>
+  <div class="fb"><div class="l"><span>© 2026 Acre. All rights reserved.</span><button data-legal="privacy">Privacy</button><button data-legal="terms">Terms</button></div><span>Concept project by <a href="https://elementa-studio.vercel.app" target="_blank" rel="noopener">Elementa Studio</a></span></div>
+ </div>
+</footer>
+
+<div class="ov" id="ov"><div class="mod" id="mod" role="dialog" aria-modal="true"></div></div>
+<script src="/main.js"></script>
+</body>
+</html>
