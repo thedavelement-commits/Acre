@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Residences · Acre</title>
+<meta name="description" content="Every residence Acre currently represents.">
+<meta name="theme-color" content="#0A3B25">
+<meta property="og:title" content="Residences · Acre">
+<meta property="og:description" content="Every residence Acre currently represents.">
+<meta property="og:image" content="/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script>try{if(localStorage.getItem('acre.night')==='1')document.documentElement.classList.add('night');if(!sessionStorage.getItem('acre.loaded'))document.documentElement.classList.add('loading')}catch(e){}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><rect x="1.5" y="1.5" width="29" height="29" rx="1"/><path d="M7 25 16 7l9 18"/><path d="M10.6 17.8h10.8M12.2 21.4h7.6M13.6 25h4.8"/></symbol>
+ <symbol id="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+ <symbol id="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+ <symbol id="plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+</svg>
+<div class="loader" id="loader" aria-hidden="true"><div class="lw"><span style="--d:0">A</span><span style="--d:1">C</span><span style="--d:2">R</span><span style="--d:3">E</span></div><div class="lbar"><i id="lbar"></i></div><div class="lnum" id="lnum">0</div></div>
+<header class="nav lightnav" id="nav">
+ <div class="wrap">
+  <a href="/" class="logo" aria-label="Acre home"><svg><use href="#mark"/></svg>ACRE</a>
+  <nav class="links"><a href="/residences">Residences</a><a href="/advisors">Advisors</a><a href="/about">About</a><a href="/journal">Journal</a><a href="/contact">Contact</a></nav>
+  <div class="r"><button class="mode" id="mode" aria-label="Switch light and dark"><svg><use href="#moon"/></svg></button><a class="btn" href="/contact">Private viewing</a><button class="burger" id="burger" aria-label="Menu"><i></i><i></i></button></div>
+ </div>
+</header>
+<div class="menu" id="menu">
+ <nav><a class="l" href="/residences" style="--i:0"><span>Residences</span><em>01</em></a><a class="l" href="/advisors" style="--i:1"><span>Advisors</span><em>02</em></a><a class="l" href="/about" style="--i:2"><span>About</span><em>03</em></a><a class="l" href="/journal" style="--i:3"><span>Journal</span><em>04</em></a><a class="l" href="/contact" style="--i:4"><span>Contact</span><em>05</em></a></nav>
+ <a class="btn btn-c mb" href="/contact">Private viewing</a>
+</div>
+<main><section class="phead"><div class="wrap"><span class="eb line reveal">Residences</span><h1 class="reveal">Every home on our books.</h1><p class="reveal">Every residence we currently represent, each one walked, photographed and priced by the advisor who knows it best.</p></div></section>
+<section class="sec tight"><div class="wrap">
+ <div class="chips" id="chips"><button class="on" data-f="">All</button><button class="" data-f="estate">Estate</button><button class="" data-f="modern">Modern</button><button class="" data-f="waterfront">Waterfront</button><button class="" data-f="family">Family</button></div>
+ <div class="cards" id="cards"><a class="pc reveal" href="/residences/cielo-house" data-type="estate" data-city="Ojai" data-price="4200000" data-bed="5"><div class="im imr"><img src="/img/r1.jpg" alt="Cielo House" loading="lazy"><span class="badge">FOR SALE</span><span class="price">$4,200,000</span></div><span class="ty">ESTATE</span><h3>Cielo House</h3><div class="ad">4 Sierra Vista Lane · Ojai, CA</div><div class="sp">5 beds · 5 baths · 5,120 sq ft</div></a><a class="pc reveal" href="/residences/the-lantern" data-type="modern" data-city="Asheville" data-price="1850000" data-bed="4"><div class="im imr"><img src="/img/r2.jpg" alt="The Lantern" loading="lazy"><span class="badge">FOR SALE</span><span class="price">$1,850,000</span></div><span class="ty">MODERN</span><h3>The Lantern</h3><div class="ad">17 Ridgeline Drive · Asheville, NC</div><div class="sp">4 beds · 3 baths · 3,640 sq ft</div></a><a class="pc reveal" href="/residences/willow-shore" data-type="waterfront" data-city="Lake Oswego" data-price="960000" data-bed="3"><div class="im imr"><img src="/img/r3.jpg" alt="Willow Shore" loading="lazy"><span class="badge">NEW</span><span class="price">$960,000</span></div><span class="ty">WATERFRONT</span><h3>Willow Shore</h3><div class="ad">88 Willow Bend · Lake Oswego, OR</div><div class="sp">3 beds · 2 baths · 2,180 sq ft</div></a><a class="pc reveal" href="/residences/the-quarry" data-type="modern" data-city="Bend" data-price="1675000" data-bed="4"><div class="im imr"><img src="/img/r4.jpg" alt="The Quarry" loading="lazy"><span class="badge">FOR SALE</span><span class="price">$1,675,000</span></div><span class="ty">MODERN</span><h3>The Quarry</h3><div class="ad">61 Basalt Road · Bend, OR</div><div class="sp">4 beds · 3 baths · 3,210 sq ft</div></a><a class="pc reveal" href="/residences/the-alder-house" data-type="family" data-city="Portland" data-price="1240000" data-bed="4"><div class="im imr"><img src="/img/r5.jpg" alt="The Alder House" loading="lazy"><span class="badge">FOR SALE</span><span class="price">$1,240,000</span></div><span class="ty">FAMILY</span><h3>The Alder House</h3><div class="ad">412 Chestnut Avenue · Portland, OR</div><div class="sp">4 beds · 3 baths · 2,840 sq ft</div></a><a class="pc reveal" href="/residences/linen-house" data-type="family" data-city="Seattle" data-price="1080000" data-bed="3"><div class="im imr"><img src="/img/r6.jpg" alt="Linen House" loading="lazy"><span class="badge">NEW</span><span class="price">$1,080,000</span></div><span class="ty">FAMILY</span><h3>Linen House</h3><div class="ad">240 Cedar Hollow · Seattle, WA</div><div class="sp">3 beds · 2 baths · 2,140 sq ft</div></a><div class="none" id="none">No residences match that search right now. Try widening it, or ask an advisor about homes not yet listed.</div></div>
+</div></section><section class="cta">
+ <img src="/img/cta.jpg" alt="" loading="lazy" class="px">
+ <div class="in">
+  <span class="eb reveal">Private viewings</span>
+  <h2 class="reveal">Ready for your next chapter?</h2>
+  <p class="reveal">Tell us what you are looking for and we will pair you with the advisor who knows that place best.</p>
+  <div class="reveal"><a class="btn btn-c" href="/contact">Arrange a private viewing <i>→</i></a></div>
+ </div>
+</section>
+</main><footer>
+ <div class="wrap">
+  <div class="fg">
+   <div><a href="/" class="logo"><svg><use href="#mark"/></svg>ACRE</a><p>A private brokerage for considered homes. Licensed in nine states.</p></div>
+   <div class="col"><h6>EXPLORE</h6><a href="/residences">Residences</a><a href="/advisors">Advisors</a><a href="/about">About</a><a href="/journal">Journal</a></div>
+   <div class="col"><h6>CONTACT</h6><a href="mailto:hello@acre.homes">hello@acre.homes</a><a href="tel:+18055550187">+1 (805) 555 0187</a><span>210 East Ojai Avenue, Ojai, CA 93023</span></div>
+   <div class="col"><h6>NEVER MISS A RESIDENCE</h6><p>New homes in your inbox before they reach the portals.</p><form class="news" novalidate><label>YOUR EMAIL</label><input type="email" placeholder="you@example.com" aria-label="Your email"><button class="btn">Subscribe <i>→</i></button><div class="fmsg"></div></form></div>
+  </div>
+  <div class="fb"><div class="l"><span>© 2026 Acre. All rights reserved.</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div><span>Designed by <a href="https://elementa-studio.vercel.app" target="_blank" rel="noopener">Elementa Studio</a></span></div>
+ </div>
+</footer>
+<script src="/lenis.min.js"></script>
+<script src="/smooth.js"></script>
+<script src="/main.js"></script>
+</body>
+</html>

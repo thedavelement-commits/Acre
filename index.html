@@ -7,158 +7,138 @@
 <meta name="description" content="A private brokerage for considered homes. Every residence walked, verified and presented by a senior advisor.">
 <meta name="theme-color" content="#0A3B25">
 <meta property="og:title" content="Acre · Homes with room to breathe">
-<meta property="og:description" content="A private brokerage for considered homes, each one walked and presented by a senior advisor.">
+<meta property="og:description" content="A private brokerage for considered homes. Every residence walked, verified and presented by a senior advisor.">
 <meta property="og:image" content="/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/img/hero.jpg" as="image">
 <link rel="stylesheet" href="/style.css">
-<script>try{if(localStorage.getItem('acre.night')==='1')document.documentElement.classList.add('night')}catch(e){}</script>
+<script>try{if(localStorage.getItem('acre.night')==='1')document.documentElement.classList.add('night');if(!sessionStorage.getItem('acre.loaded'))document.documentElement.classList.add('loading')}catch(e){}</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
  <symbol id="mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><rect x="1.5" y="1.5" width="29" height="29" rx="1"/><path d="M7 25 16 7l9 18"/><path d="M10.6 17.8h10.8M12.2 21.4h7.6M13.6 25h4.8"/></symbol>
  <symbol id="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
  <symbol id="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+ <symbol id="plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
 </svg>
-
+<div class="loader" id="loader" aria-hidden="true"><div class="lw"><span style="--d:0">A</span><span style="--d:1">C</span><span style="--d:2">R</span><span style="--d:3">E</span></div><div class="lbar"><i id="lbar"></i></div><div class="lnum" id="lnum">0</div></div>
 <header class="nav" id="nav">
  <div class="wrap">
-  <a href="#top" class="logo" aria-label="Acre home"><svg><use href="#mark"/></svg>ACRE</a>
-  <nav class="links"><a href="#residences">Residences</a><a href="#advisors">Advisors</a><a href="#about">About</a><a href="#journal">Journal</a><a href="#contact">Contact</a></nav>
-  <div class="r"><button class="mode" id="mode" aria-label="Switch light and dark"><svg><use href="#moon"/></svg></button><button class="btn" data-view>Private viewing</button><button class="burger" id="burger" aria-label="Menu"><i></i></button></div>
+  <a href="/" class="logo" aria-label="Acre home"><svg><use href="#mark"/></svg>ACRE</a>
+  <nav class="links"><a href="/residences">Residences</a><a href="/advisors">Advisors</a><a href="/about">About</a><a href="/journal">Journal</a><a href="/contact">Contact</a></nav>
+  <div class="r"><button class="mode" id="mode" aria-label="Switch light and dark"><svg><use href="#moon"/></svg></button><a class="btn" href="/contact">Private viewing</a><button class="burger" id="burger" aria-label="Menu"><i></i><i></i></button></div>
  </div>
 </header>
 <div class="menu" id="menu">
- <div class="top"><span class="logo"><svg><use href="#mark"/></svg>ACRE</span><button class="burger" id="close" style="display:grid" aria-label="Close menu">✕</button></div>
- <a class="l" href="#residences">Residences</a><a class="l" href="#advisors">Advisors</a><a class="l" href="#about">About</a><a class="l" href="#journal">Journal</a><a class="l" href="#contact">Contact</a>
- <button class="btn btn-c" data-view>Arrange a private viewing <i>→</i></button>
+ <nav><a class="l" href="/residences" style="--i:0"><span>Residences</span><em>01</em></a><a class="l" href="/advisors" style="--i:1"><span>Advisors</span><em>02</em></a><a class="l" href="/about" style="--i:2"><span>About</span><em>03</em></a><a class="l" href="/journal" style="--i:3"><span>Journal</span><em>04</em></a><a class="l" href="/contact" style="--i:4"><span>Contact</span><em>05</em></a></nav>
+ <a class="btn btn-c mb" href="/contact">Private viewing</a>
 </div>
-
-<main id="top">
-<section class="hero">
- <div class="bg"><img src="/img/hero.jpg" alt="Timber living room with a glass wall facing the mountains at sunset" fetchpriority="high"></div>
+<main><section class="hero">
+ <div class="bgs" id="bgs"><div class="bg on"><img decoding="async" src="/img/h1.jpg" alt="Cielo House" fetchpriority=high></div><div class="bg"><img decoding="async" src="/img/h2.jpg" alt="The Lantern" loading=lazy></div><div class="bg"><img decoding="async" src="/img/h3.jpg" alt="Willow Shore" loading=lazy></div></div>
  <div class="wrap">
   <div class="hrow">
    <div>
-    <span class="eb reveal">Private residences</span>
-    <h1 class="reveal">Homes with room<br>to breathe.</h1>
-    <p class="reveal">A private brokerage for considered homes, each one walked, verified and presented by a senior advisor.</p>
-    <div class="ctas reveal"><a class="btn btn-c" href="#residences">View residences <i>→</i></a><button class="btn btn-o" data-view>Private viewing</button></div>
+    <span class="eb hi">Private residences</span>
+    <h1 class="hi">Homes with room <br>to breathe.</h1>
+    <p class="hi">A private brokerage for considered homes, each one walked, verified and presented by a senior advisor.</p>
+    <div class="ctas hi"><a class="btn btn-c" href="/residences">View residences <i>→</i></a><a class="btn btn-o" href="/contact">Private viewing</a></div>
    </div>
-   <div class="feat reveal" id="feat">
-    <div class="top"><span>NOW PRESENTING</span><span id="fBadge">FEATURED</span></div>
-    <div class="ftxt" id="ftxt"><h3 id="fName">Cielo House</h3><small id="fAddr">4 Sierra Vista Lane, Ojai, CA</small><div class="pr"><b id="fPrice">$4,200,000</b><button class="tl" id="fView">View <i>→</i></button></div></div>
-    <div class="segs" id="segs"><button aria-label="Residence 1"><i></i></button><button aria-label="Residence 2"><i></i></button><button aria-label="Residence 3"><i></i></button></div>
-   </div>
+   <a class="feat hi" id="feat" href="/residences/cielo-house">
+    <div class="top"><span>NOW PRESENTING</span><span>FEATURED</span></div>
+    <div class="ftxt" id="ftxt"><h3 id="fName">Cielo House</h3><small id="fAddr">4 Sierra Vista Lane, Ojai, CA</small><div class="pr"><b id="fPrice">$4,200,000</b><span class="tl">View <i>→</i></span></div></div>
+    <div class="segs" id="segs"><button aria-label="Residence 1" data-slug="cielo-house" data-n="Cielo House" data-a="4 Sierra Vista Lane, Ojai, CA" data-p="$4,200,000"><i></i></button><button aria-label="Residence 2" data-slug="the-lantern" data-n="The Lantern" data-a="17 Ridgeline Drive, Asheville, NC" data-p="$1,850,000"><i></i></button><button aria-label="Residence 3" data-slug="willow-shore" data-n="Willow Shore" data-a="88 Willow Bend, Lake Oswego, OR" data-p="$960,000"><i></i></button></div>
+   </a>
   </div>
-  <form class="search reveal" id="search">
-   <div class="sf"><label for="sLoc">LOCATION</label><select id="sLoc"><option value="">All locations</option><option>Ojai</option><option>Asheville</option><option>Lake Oswego</option></select></div>
-   <div class="sf"><label for="sType">PROPERTY TYPE</label><select id="sType"><option value="">All types</option><option value="estate">Estate</option><option value="modern">Modern</option><option value="waterfront">Waterfront</option></select></div>
-   <div class="sf"><label for="sPrice">PRICE RANGE</label><select id="sPrice"><option value="">Any price</option><option value="0-1500000">Under $1.5m</option><option value="1500000-3000000">$1.5m to $3m</option><option value="3000000-99999999">$3m +</option></select></div>
-   <div class="sf"><label for="sBed">BEDROOMS</label><select id="sBed"><option value="0">Any</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option></select></div>
+  <form class="search hi" id="search" action="/residences">
+   <div class="sf"><label for="sLoc">LOCATION</label><select id="sLoc" name="loc"><option value="">All locations</option><option>Asheville</option><option>Bend</option><option>Lake Oswego</option><option>Ojai</option><option>Portland</option><option>Seattle</option></select></div>
+   <div class="sf"><label for="sType">PROPERTY TYPE</label><select id="sType" name="type"><option value="">All types</option><option value="estate">Estate</option><option value="modern">Modern</option><option value="waterfront">Waterfront</option><option value="family">Family</option></select></div>
+   <div class="sf"><label for="sPrice">PRICE RANGE</label><select id="sPrice" name="price"><option value="">Any price</option><option value="0-1200000">Under $1.2m</option><option value="1200000-2000000">$1.2m to $2m</option><option value="2000000-99999999">$2m +</option></select></div>
+   <div class="sf"><label for="sBed">BEDROOMS</label><select id="sBed" name="bed"><option value="">Any</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option></select></div>
    <button class="btn" type="submit">Search <i>→</i></button>
   </form>
  </div>
 </section>
-
 <div class="tick" aria-hidden="true"><div class="row"><span>New this week</span><span>Waterfront</span><span>Architect led</span><span>Move in ready</span><span>Off market</span><span>Historic homes</span><span>New this week</span><span>Waterfront</span><span>Architect led</span><span>Move in ready</span><span>Off market</span><span>Historic homes</span></div></div>
-
-<section class="sec" id="residences">
+<section class="sec">
  <div class="wrap">
   <div class="shead"><div><span class="eb reveal">Featured residences</span><h2 class="reveal">Chosen by hand, not by feed</h2></div><p class="reveal">A short list our advisors walked through this month. No syndicated listings, no tired photographs.</p></div>
-  <div class="cards" id="cards"></div>
-  <div class="below"><button class="tl reveal" id="viewAll">View all residences <i>→</i></button><span class="eb" id="count"></span></div>
+  <div class="cards"><a class="pc reveal" href="/residences/cielo-house" data-type="estate" data-city="Ojai" data-price="4200000" data-bed="5"><div class="im imr"><img src="/img/r1.jpg" alt="Cielo House" loading="lazy"><span class="badge">FOR SALE</span><span class="price">$4,200,000</span></div><span class="ty">ESTATE</span><h3>Cielo House</h3><div class="ad">4 Sierra Vista Lane · Ojai, CA</div><div class="sp">5 beds · 5 baths · 5,120 sq ft</div></a><a class="pc reveal" href="/residences/the-lantern" data-type="modern" data-city="Asheville" data-price="1850000" data-bed="4"><div class="im imr"><img src="/img/r2.jpg" alt="The Lantern" loading="lazy"><span class="badge">FOR SALE</span><span class="price">$1,850,000</span></div><span class="ty">MODERN</span><h3>The Lantern</h3><div class="ad">17 Ridgeline Drive · Asheville, NC</div><div class="sp">4 beds · 3 baths · 3,640 sq ft</div></a><a class="pc reveal" href="/residences/willow-shore" data-type="waterfront" data-city="Lake Oswego" data-price="960000" data-bed="3"><div class="im imr"><img src="/img/r3.jpg" alt="Willow Shore" loading="lazy"><span class="badge">NEW</span><span class="price">$960,000</span></div><span class="ty">WATERFRONT</span><h3>Willow Shore</h3><div class="ad">88 Willow Bend · Lake Oswego, OR</div><div class="sp">3 beds · 2 baths · 2,180 sq ft</div></a></div>
+  <div class="below"><a class="tl reveal" href="/residences">View all residences <i>→</i></a></div>
  </div>
 </section>
-
-<section class="about" id="about">
- <div class="im"><img src="/img/about.jpg" alt="Soft beige hallway with a curved staircase" loading="lazy" id="aboutImg"></div>
- <div class="box">
-  <div class="inner reveal">
-   <span class="eb">About Acre</span>
-   <blockquote id="quote">We work with people who care how they will live, not only what they will spend. Fewer listings, longer conversations, and the honesty to tell you when a house is wrong.</blockquote>
-   <div class="trio">
-    <div><i>01</i><b>Design led search</b><p>We begin with how you want to live, then find the homes that fit, not the other way round.</p></div>
-    <div><i>02</i><b>Structure and survey</b><p>Every home is read by someone who knows what a hairline crack is telling them.</p></div>
-    <div><i>03</i><b>Energy and longevity</b><p>Running costs and retrofit potential are on the table before you ever commit.</p></div>
-   </div>
+<section class="about">
+ <div class="im"><img src="/img/about.jpg" alt="Soft beige hallway with a curved staircase" loading="lazy"></div>
+ <div class="box"><div class="inner reveal">
+  <span class="eb">About Acre</span>
+  <blockquote id="quote">We work with people who care how they will live, not only what they will spend. Fewer listings, longer conversations, and the honesty to tell you when a house is wrong.</blockquote>
+  <div class="trio">
+   <div><i>01</i><b>Design led search</b><p>We begin with how you want to live, then find the homes that fit, not the other way round.</p></div>
+   <div><i>02</i><b>Structure and survey</b><p>Every home is read by someone who knows what a hairline crack is telling them.</p></div>
+   <div><i>03</i><b>Energy and longevity</b><p>Running costs and retrofit potential are on the table before you ever commit.</p></div>
   </div>
- </div>
+ </div></div>
 </section>
-
-<section class="stats">
- <div class="wrap">
+<section class="stats"><div class="wrap">
   <div class="reveal"><b><span data-count="980">0</span>+</b><em>RESIDENCES PLACED</em></div>
   <div class="reveal"><b data-count="18">0</b><em>YEARS IN PRACTICE</em></div>
   <div class="reveal"><b data-count="9">0</b><em>STATES LICENSED</em></div>
   <div class="reveal"><b><span data-count="32">0</span>+</b><em>SENIOR ADVISORS</em></div>
- </div>
-</section>
-
+</div></section>
 <section class="sec">
  <div class="wrap">
   <div class="shead"><div><span class="eb reveal">What else we do</span><h2 class="reveal">Support beyond the sale</h2></div></div>
   <div class="svc">
-   <div class="sv reveal"><img src="/img/s1.jpg" alt="" loading="lazy"><h3>Mortgage and finance</h3><div><p>Introductions to lenders who understand architect designed and unusual homes.</p><button class="btn btn-c" data-svc="0">Learn more <i>→</i></button></div></div>
-   <div class="sv reveal"><img src="/img/s2.jpg" alt="" loading="lazy"><h3>Property management</h3><div><p>Quiet, careful care for owners who spend part of the year somewhere else.</p><button class="btn btn-c" data-svc="1">Learn more <i>→</i></button></div></div>
-   <div class="sv reveal"><img src="/img/s3.jpg" alt="" loading="lazy"><h3>Renovation and design</h3><div><p>Architects and builders we have trusted for years, briefed before you buy.</p><button class="btn btn-c" data-svc="2">Learn more <i>→</i></button></div></div>
+   <a class="sv reveal" href="/contact"><img src="/img/s1.jpg" alt="" loading="lazy"><h3>Mortgage and finance</h3><div><p>Introductions to lenders who understand architect designed and unusual homes.</p><span class="btn btn-c">Learn more <i>→</i></span></div></a>
+   <a class="sv reveal" href="/contact"><img src="/img/s2.jpg" alt="" loading="lazy"><h3>Property management</h3><div><p>Quiet, careful care for owners who spend part of the year somewhere else.</p><span class="btn btn-c">Learn more <i>→</i></span></div></a>
+   <a class="sv reveal" href="/contact"><img src="/img/s3.jpg" alt="" loading="lazy"><h3>Renovation and design</h3><div><p>Architects and builders we have trusted for years, briefed before you buy.</p><span class="btn btn-c">Learn more <i>→</i></span></div></a>
   </div>
  </div>
 </section>
-
 <div class="wrap"><div class="rule"></div></div>
-
-<section style="padding-bottom:120px" id="advisors">
+<section style="padding-bottom:120px">
  <div class="wrap">
   <div class="shead"><div><span class="eb reveal">Our advisors</span><h2 class="reveal">The people behind every introduction</h2></div><p class="reveal">Four senior advisors, four markets, one standard of care.</p></div>
-  <div class="advs" id="advs"></div>
-  <div class="below"><button class="tl reveal" data-view>Book time with an advisor <i>→</i></button></div>
+  <div class="advs"><a class="av reveal" href="/advisors/julian-hart"><div class="im imr"><img src="/img/a1.jpg" alt="Julian Hart" loading="lazy"></div><h4>Julian Hart</h4><small>Managing broker · Ojai</small></a><a class="av reveal" href="/advisors/naomi-brooks"><div class="im imr"><img src="/img/a2.jpg" alt="Naomi Brooks" loading="lazy"></div><h4>Naomi Brooks</h4><small>Senior advisor · Asheville</small></a><a class="av reveal" href="/advisors/elias-ward"><div class="im imr"><img src="/img/a3.jpg" alt="Elias Ward" loading="lazy"></div><h4>Elias Ward</h4><small>Estate specialist · Bend</small></a><a class="av reveal" href="/advisors/sofia-marin"><div class="im imr"><img src="/img/a4.jpg" alt="Sofia Marin" loading="lazy"></div><h4>Sofia Marin</h4><small>Buyer's advisor · Lake Oswego</small></a></div>
+  <div class="below"><a class="tl reveal" href="/advisors">Meet all advisors <i>→</i></a></div>
  </div>
 </section>
-
 <section class="tst">
  <div class="wrap">
   <div class="stars">★★★★★</div>
-  <blockquote id="tq"></blockquote>
-  <div class="who" id="tw"></div>
-  <div class="dots" id="tdots"></div>
+  <blockquote id="tq">“The first brokerage that asked how we wanted to live before asking what we could spend.”</blockquote>
+  <div class="who" id="tw">DANIEL & AMARA O.<small>Bought in Ojai, CA</small></div>
+  <div class="dots" id="tdots"><button aria-label="Quote 1" data-q="The first brokerage that asked how we wanted to live before asking what we could spend." data-w="DANIEL & AMARA O." data-s="Bought in Ojai, CA"></button><button aria-label="Quote 2" data-q="Acre made selling our family home feel calm instead of stressful. Every step was explained before it happened." data-w="RUTH & LEON K." data-s="Sold in Asheville, NC"></button><button aria-label="Quote 3" data-q="Naomi told us to walk away from a house we loved, and she was right. Three weeks later she found the one." data-w="PRIYA S." data-s="Bought in Lake Oswego, OR"></button></div>
  </div>
 </section>
-
-<section class="sec" id="journal">
+<section class="sec">
  <div class="wrap">
   <div class="shead"><div><span class="eb reveal">The journal</span><h2 class="reveal">Notes for buyers and sellers</h2></div><p class="reveal">Written by the advisors doing the work, not by a content team.</p></div>
-  <div class="jr" id="jr"></div>
+  <div class="jr"><a class="jp reveal" href="/journal/rising-inventory-autumn"><div class="im imr"><img src="/img/j1.jpg" alt="" loading="lazy"></div><span class="eb">MARKET REPORT · 6 MIN READ</span><h4>What rising inventory means for buyers this autumn</h4><p>Inventory is up nineteen per cent. In two of our markets that means leverage. In the other two it mostly means the wrong homes are sitting.</p></a><a class="jp reveal" href="/journal/seven-questions-first-viewing"><div class="im imr"><img src="/img/j2.jpg" alt="" loading="lazy"></div><span class="eb">BUYING GUIDE · 4 MIN READ</span><h4>Seven questions to ask before your first viewing</h4><p>The useful questions are duller than the kitchen, and they are about the parts of the house you cannot see.</p></a><a class="jp reveal" href="/journal/staging-that-moves-the-price"><div class="im imr"><img src="/img/j3.jpg" alt="" loading="lazy"></div><span class="eb">SELLING · 5 MIN READ</span><h4>Staging that actually moves the price</h4><p>Most staging spend never comes back. Three things reliably do, and one of them costs sixty dollars.</p></a></div>
+  <div class="below"><a class="tl reveal" href="/journal">Read the journal <i>→</i></a></div>
  </div>
 </section>
-
-<section class="cta" id="contact">
- <img src="/img/cta.jpg" alt="" loading="lazy" id="ctaImg">
+<section class="cta">
+ <img src="/img/cta.jpg" alt="" loading="lazy" class="px">
  <div class="in">
   <span class="eb reveal">Private viewings</span>
   <h2 class="reveal">Ready for your next chapter?</h2>
   <p class="reveal">Tell us what you are looking for and we will pair you with the advisor who knows that place best.</p>
-  <div class="reveal"><button class="btn btn-c" data-view>Arrange a private viewing <i>→</i></button></div>
+  <div class="reveal"><a class="btn btn-c" href="/contact">Arrange a private viewing <i>→</i></a></div>
  </div>
 </section>
-</main>
-
-<footer>
+</main><footer>
  <div class="wrap">
   <div class="fg">
-   <div><span class="logo"><svg><use href="#mark"/></svg>ACRE</span><p>A private brokerage for considered homes. Licensed in nine states.</p></div>
-   <div class="col"><h6>EXPLORE</h6><a href="#residences">Residences</a><a href="#advisors">Advisors</a><a href="#about">About</a><a href="#journal">Journal</a></div>
-   <div class="col"><h6>CONTACT</h6><span>hello@acre.homes</span><span>+1 (805) 555 0187</span><span>210 East Ojai Avenue, Ojai, CA 93023</span></div>
-   <div class="col"><h6>NEVER MISS A RESIDENCE</h6><p>New homes in your inbox before they reach the portals.</p><form id="news" novalidate><label for="nEmail">YOUR EMAIL</label><input id="nEmail" type="email" placeholder="you@example.com"><button class="btn">Subscribe <i>→</i></button><div class="fmsg" id="nMsg"></div></form></div>
+   <div><a href="/" class="logo"><svg><use href="#mark"/></svg>ACRE</a><p>A private brokerage for considered homes. Licensed in nine states.</p></div>
+   <div class="col"><h6>EXPLORE</h6><a href="/residences">Residences</a><a href="/advisors">Advisors</a><a href="/about">About</a><a href="/journal">Journal</a></div>
+   <div class="col"><h6>CONTACT</h6><a href="mailto:hello@acre.homes">hello@acre.homes</a><a href="tel:+18055550187">+1 (805) 555 0187</a><span>210 East Ojai Avenue, Ojai, CA 93023</span></div>
+   <div class="col"><h6>NEVER MISS A RESIDENCE</h6><p>New homes in your inbox before they reach the portals.</p><form class="news" novalidate><label>YOUR EMAIL</label><input type="email" placeholder="you@example.com" aria-label="Your email"><button class="btn">Subscribe <i>→</i></button><div class="fmsg"></div></form></div>
   </div>
-  <div class="fb"><div class="l"><span>© 2026 Acre. All rights reserved.</span><button data-legal="privacy">Privacy</button><button data-legal="terms">Terms</button></div><span>Designed by <a href="https://elementa-studio.vercel.app" target="_blank" rel="noopener">Elementa Studio</a></span></div>
+  <div class="fb"><div class="l"><span>© 2026 Acre. All rights reserved.</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div><span>Designed by <a href="https://elementa-studio.vercel.app" target="_blank" rel="noopener">Elementa Studio</a></span></div>
  </div>
 </footer>
-
-<div class="ov" id="ov"><div class="mod" id="mod" role="dialog" aria-modal="true"></div></div>
 <script src="/lenis.min.js"></script>
 <script src="/smooth.js"></script>
 <script src="/main.js"></script>

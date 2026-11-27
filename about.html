@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>About · Acre</title>
+<meta name="description" content="How Acre began and how we work.">
+<meta name="theme-color" content="#0A3B25">
+<meta property="og:title" content="About · Acre">
+<meta property="og:description" content="How Acre began and how we work.">
+<meta property="og:image" content="/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script>try{if(localStorage.getItem('acre.night')==='1')document.documentElement.classList.add('night');if(!sessionStorage.getItem('acre.loaded'))document.documentElement.classList.add('loading')}catch(e){}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><rect x="1.5" y="1.5" width="29" height="29" rx="1"/><path d="M7 25 16 7l9 18"/><path d="M10.6 17.8h10.8M12.2 21.4h7.6M13.6 25h4.8"/></symbol>
+ <symbol id="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+ <symbol id="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+ <symbol id="plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+</svg>
+<div class="loader" id="loader" aria-hidden="true"><div class="lw"><span style="--d:0">A</span><span style="--d:1">C</span><span style="--d:2">R</span><span style="--d:3">E</span></div><div class="lbar"><i id="lbar"></i></div><div class="lnum" id="lnum">0</div></div>
+<header class="nav lightnav" id="nav">
+ <div class="wrap">
+  <a href="/" class="logo" aria-label="Acre home"><svg><use href="#mark"/></svg>ACRE</a>
+  <nav class="links"><a href="/residences">Residences</a><a href="/advisors">Advisors</a><a href="/about">About</a><a href="/journal">Journal</a><a href="/contact">Contact</a></nav>
+  <div class="r"><button class="mode" id="mode" aria-label="Switch light and dark"><svg><use href="#moon"/></svg></button><a class="btn" href="/contact">Private viewing</a><button class="burger" id="burger" aria-label="Menu"><i></i><i></i></button></div>
+ </div>
+</header>
+<div class="menu" id="menu">
+ <nav><a class="l" href="/residences" style="--i:0"><span>Residences</span><em>01</em></a><a class="l" href="/advisors" style="--i:1"><span>Advisors</span><em>02</em></a><a class="l" href="/about" style="--i:2"><span>About</span><em>03</em></a><a class="l" href="/journal" style="--i:3"><span>Journal</span><em>04</em></a><a class="l" href="/contact" style="--i:4"><span>Contact</span><em>05</em></a></nav>
+ <a class="btn btn-c mb" href="/contact">Private viewing</a>
+</div>
+<main><section class="phead"><div class="wrap"><span class="eb line reveal">About</span><h1 class="reveal">A house built the slow way.</h1><p class="reveal">Acre began with one office, one advisor and a refusal to present a home nobody had stood inside.</p></div></section>
+<section class="sec tight"><div class="wrap">
+ <div class="wide imr reveal"><img src="/img/ab1.jpg" alt="A house above the mist in a forest" class="px2"></div>
+ <div class="story">
+  <div class="imr reveal"><img src="/img/about.jpg" alt="" loading="lazy"></div>
+  <div class="items">
+   <div class="reveal"><i>01</i><div><b>We started in 2008</b><p>One office above a bakery in Ojai, one advisor, and a rule that has never changed: nobody presents a home they have not walked through themselves. It made us slower than the portals. It also made us right more often.</p></div></div>
+   <div class="reveal"><i>02</i><div><b>How we work</b><p>Every residence is checked again each week. Every buyer gets one advisor, not a queue. Every offer is explained in plain language before it is signed, including the parts that are not in your favour.</p></div></div>
+   <div class="reveal"><i>03</i><div><b>Where we are going</b><p>Nine states, thirty two advisors, and no ambition to become a portal. We would rather be the brokerage people call back than the one with the most listings.</p></div></div>
+  </div>
+ </div>
+</div></section>
+<section class="stats"><div class="wrap">
+  <div class="reveal"><b><span data-count="980">0</span>+</b><em>RESIDENCES PLACED</em></div>
+  <div class="reveal"><b data-count="18">0</b><em>YEARS IN PRACTICE</em></div>
+  <div class="reveal"><b data-count="9">0</b><em>STATES LICENSED</em></div>
+  <div class="reveal"><b><span data-count="32">0</span>+</b><em>SENIOR ADVISORS</em></div>
+</div></section>
+<section class="sec"><div class="wrap">
+ <span class="eb reveal">What we hold to</span><h2 class="h2 reveal">Four promises, kept<br>on every home.</h2>
+ <div class="promises">
+  <div class="reveal"><b>Say the hard thing</b><p>If a home is priced wrong, you hear it from us first.</p></div>
+  <div class="reveal"><b>One advisor, start to finish</b><p>No handoffs between departments halfway through.</p></div>
+  <div class="reveal"><b>No hidden fees</b><p>Every cost is on the table before you sign anything.</p></div>
+  <div class="reveal"><b>An answer within a day</b><p>Calls, emails and messages, one business day, every time.</p></div>
+ </div>
+</div></section><section class="cta">
+ <img src="/img/cta.jpg" alt="" loading="lazy" class="px">
+ <div class="in">
+  <span class="eb reveal">Private viewings</span>
+  <h2 class="reveal">Ready for your next chapter?</h2>
+  <p class="reveal">Tell us what you are looking for and we will pair you with the advisor who knows that place best.</p>
+  <div class="reveal"><a class="btn btn-c" href="/contact">Arrange a private viewing <i>→</i></a></div>
+ </div>
+</section>
+</main><footer>
+ <div class="wrap">
+  <div class="fg">
+   <div><a href="/" class="logo"><svg><use href="#mark"/></svg>ACRE</a><p>A private brokerage for considered homes. Licensed in nine states.</p></div>
+   <div class="col"><h6>EXPLORE</h6><a href="/residences">Residences</a><a href="/advisors">Advisors</a><a href="/about">About</a><a href="/journal">Journal</a></div>
+   <div class="col"><h6>CONTACT</h6><a href="mailto:hello@acre.homes">hello@acre.homes</a><a href="tel:+18055550187">+1 (805) 555 0187</a><span>210 East Ojai Avenue, Ojai, CA 93023</span></div>
+   <div class="col"><h6>NEVER MISS A RESIDENCE</h6><p>New homes in your inbox before they reach the portals.</p><form class="news" novalidate><label>YOUR EMAIL</label><input type="email" placeholder="you@example.com" aria-label="Your email"><button class="btn">Subscribe <i>→</i></button><div class="fmsg"></div></form></div>
+  </div>
+  <div class="fb"><div class="l"><span>© 2026 Acre. All rights reserved.</span><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div><span>Designed by <a href="https://elementa-studio.vercel.app" target="_blank" rel="noopener">Elementa Studio</a></span></div>
+ </div>
+</footer>
+<script src="/lenis.min.js"></script>
+<script src="/smooth.js"></script>
+<script src="/main.js"></script>
+</body>
+</html>
