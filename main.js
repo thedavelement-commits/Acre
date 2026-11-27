@@ -101,18 +101,18 @@ const qws = $$('span', qEl), aImg = $('#aboutImg'), cImg = $('#ctaImg');
 function sc() {
  const r = qEl.getBoundingClientRect(), p = Math.min(1, Math.max(0, (innerHeight * .85 - r.top) / (r.height + innerHeight * .35)));
  const n = Math.round(p * qws.length); qws.forEach((w, i) => w.classList.toggle('on', i < n));
- if (!reduce) { const a = aImg.parentElement.getBoundingClientRect(); aImg.style.transform = `translateY(${(a.top / innerHeight) * -60 - 40}px)`; const c = cImg.parentElement.getBoundingClientRect(); cImg.style.transform = `translateY(${(c.top / innerHeight) * -60 - 40}px)` }
+ if (!reduce) { const c = cImg.parentElement.getBoundingClientRect(); cImg.style.transform = `translateY(${(c.top / innerHeight) * -60 - 40}px)` }
 }
-addEventListener('scroll', sc, { passive: true }); sc();
+let scQ = 0; addEventListener('scroll', () => { if (!scQ) scQ = requestAnimationFrame(() => { scQ = 0; sc() }) }, { passive: true }); sc();
 
 /* modal */
 const ov = $('#ov'), mod = $('#mod');
-function open(html, wide) { mod.className = 'mod' + (wide ? ' wide' : ''); mod.innerHTML = `<button class="x" aria-label="Close">×</button>` + html; ov.classList.add('open'); mod.scrollTop = 0; document.body.style.overflow = 'hidden'; $('.x', mod).onclick = close }
-function close() { ov.classList.remove('open'); document.body.style.overflow = '' }
+function open(html, wide) { mod.className = 'mod' + (wide ? ' wide' : ''); mod.innerHTML = `<button class="x" aria-label="Close">×</button>` + html; ov.classList.add('open'); mod.scrollTop = 0; document.body.style.overflow = 'hidden'; window.__lenis&&window.__lenis.stop(); $('.x', mod).onclick = close }
+function close() { ov.classList.remove('open'); document.body.style.overflow = ''; window.__lenis&&window.__lenis.start(); }
 ov.onclick = e => { if (e.target === ov) close() }; addEventListener('keydown', e => e.key === 'Escape' && close());
 function openHome(i) { const h = homes[i]; open(`<div class="pm"><img src="${h.img}" alt="${h.n}"><div class="b"><span class="eb">${h.b} · ${h.c.toUpperCase()}, ${h.st}</span><h3>${h.n}</h3><span style="color:var(--mut);font-size:13.5px">${h.a}, ${h.c}, ${h.st}</span><div class="facts"><div><b>${money(h.p)}</b><span>PRICE</span></div><div><b>${h.bd}</b><span>BEDROOMS</span></div><div><b>${h.ba}</b><span>BATHROOMS</span></div><div><b>${h.sf.toLocaleString('en-US')}</b><span>SQ FT</span></div></div><p>${h.d}</p><button class="btn btn-d" data-view="${i}">Arrange a private viewing <i>→</i></button></div></div>`, true) }
 function viewing(home, adv) {
- open(`<span class="eb">Private viewing</span><h3>Let us show you around.</h3><p class="lead">Leave your details and the right advisor will be in touch within one working day.</p>
+ open(`<span class="eb">Contact us</span><h3>Let us show you around.</h3><p class="lead">Leave your details and the right advisor will be in touch within one working day.</p>
  <form id="vf" novalidate><div class="two"><label class="fld"><span>FULL NAME</span><input name="n" autocomplete="name"></label><label class="fld"><span>EMAIL</span><input name="e" type="email" autocomplete="email"></label></div>
  <label class="fld"><span>RESIDENCE</span><select name="h"><option value="">Not sure yet</option>${homes.map((h, i) => `<option value="${i}" ${String(home) === String(i) ? 'selected' : ''}>${h.n}, ${h.c}</option>`).join('')}</select></label>
  <label class="fld"><span>ADVISOR</span><select name="a"><option value="">Match me with an advisor</option>${people.map((p, i) => `<option value="${i}" ${String(adv) === String(i) ? 'selected' : ''}>${p.n}, ${p.c}</option>`).join('')}</select></label>
@@ -128,7 +128,7 @@ document.addEventListener('click', e => {
  const h = e.target.closest('[data-home]'); if (h) return openHome(+h.dataset.home);
  const p = e.target.closest('[data-post]'); if (p) { const x = posts[+p.dataset.post]; return open(`<div class="art"><span class="eb">${x.cat} · ${x.m}</span><h3 style="margin-top:12px">${x.h}</h3><img src="${x.img}" alt="">${x.b.map(t => `<p>${t}</p>`).join('')}</div>`, true) }
  const s = e.target.closest('[data-svc]'); if (s) { const x = svcs[+s.dataset.svc]; return open(`<span class="eb">What else we do</span><h3>${x[0]}</h3><p class="lead">${x[1]}</p><button class="btn btn-d" data-view>Talk to an advisor <i>→</i></button>`) }
- const l = e.target.closest('[data-legal]'); if (l) { const t = l.dataset.legal === 'terms'; return open(`<h3>${t ? 'Terms' : 'Privacy'}</h3><p class="lead">${t ? 'Acre is a concept brokerage created to show a complete real estate website. The residences, advisors and prices on this page are illustrative.' : 'This concept site does not collect personal data. Forms show a confirmation in your browser and nothing is sent anywhere.'}</p>`) }
+ const l = e.target.closest('[data-legal]'); if (l) { const t = l.dataset.legal === 'terms'; return open(`<h3>${t ? 'Terms' : 'Privacy'}</h3><p class="lead">${t ? 'Acre is a licensed brokerage. Listing details are shared in good faith and should be confirmed through survey and legal review before any purchase is agreed.' : 'We use your details only to arrange viewings and send the updates you ask for. We never sell your information, and you can unsubscribe at any time.'}</p>`) }
 });
 
 /* newsletter */
